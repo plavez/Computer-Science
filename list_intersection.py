@@ -1,7 +1,3 @@
-# this_week_winners = [2, 43, 48, 62, 64, 28, 3]
-# most_common_winners = [2, 43, 48, 62, 64, 28, 3]
-
-
 def return_inner(list1, list2):
     list3 = [same_number for same_number in list1 if same_number in list2]
     return list3
