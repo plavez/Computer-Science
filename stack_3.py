@@ -1,0 +1,15 @@
+a_stack = []
+print(a_stack)
+a_stack.append('Harry')
+print(a_stack)
+a_stack.append('Potter')
+print(a_stack)
+a_stack.append('Germiona')
+print(a_stack)
+a_stack.append('Greinjer')
+print(a_stack)
+b_stack = []
+b_stack.append(a_stack.pop(1))
+b_stack.append(a_stack.pop(2))
+print(b_stack)
+print(a_stack)
