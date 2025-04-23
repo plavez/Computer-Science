@@ -12,12 +12,32 @@
 
 
 def search_and_remove(a_string):
-    a_list = []
     a_list = a_string.split()
-    a_dict = {}
+    seen = set()
     for index, value in enumerate(a_list):
-        return index, value
+        word = value.lower().strip(".,!?")
+        if word in seen:
+            return index, value
+        seen.add(word)
+    return None
 
 
 print(search_and_remove(
+    "I am a self-taught programmer looking for a job as a programmer."))
+
+
+def search_and_remove_2(a_string):
+    a_list = a_string.split()
+    seen = set()
+
+    for index, word in enumerate(a_list):
+        cleaned = word
+        if cleaned in seen:
+            del a_list[index]
+            return ' '.join(a_list)
+        seen.add(cleaned)
+    return a_string
+
+
+print(search_and_remove_2(
     "I am a self-taught programmer looking for a job as a programmer."))
